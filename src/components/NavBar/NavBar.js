@@ -12,12 +12,12 @@ function NavBar () {
             <>
               <Navbar  bg="dark" variant="dark" >
                 <Container className="navBar">
-                  <Navbar.Brand href="#home">Inicio</Navbar.Brand>
+                  <Navbar.Brand className="titulo" href="#home">Ferreteria</Navbar.Brand>
                   <Nav className="me-auto">
-                    <Nav.Link href="#contacto">Contactos</Nav.Link>
-                    <Nav.Link href="#nosotros">Nosotros</Nav.Link>
-                    <Nav.Link href="#herramientas mano">Herramientas de Mano</Nav.Link>
-                    <Nav.Link href="#herramientas electricas">Herramientas Electricas</Nav.Link>
+                    <Nav.Link href="#Inicio">Inicio</Nav.Link>
+                    <Nav.Link href="#Contacto">Contacto</Nav.Link>
+                    <Nav.Link href="#Herramientas mano">Herramientas de Mano</Nav.Link>
+                    <Nav.Link href="#Herramientas electricas">Herramientas Electricas</Nav.Link>
                   </Nav>
                 </Container>
               </Navbar>
