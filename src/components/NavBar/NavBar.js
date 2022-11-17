@@ -12,7 +12,7 @@ function NavBar () {
             <>
               <Navbar  bg="dark" variant="dark" >
                 <Container className="navBar">
-                  <Navbar.Brand className="titulo" href="#home">Ferreteria</Navbar.Brand>
+                  <Navbar.Text className="titulo" href="#home">Ferreteria</Navbar.Text>
                   <Nav className="me-auto">
                     <Nav.Link href="#Inicio">Inicio</Nav.Link>
                     <Nav.Link href="#Contacto">Contacto</Nav.Link>
