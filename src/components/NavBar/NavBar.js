@@ -3,6 +3,10 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import "./NavBar.css";
+import { Contador } from "../Contador/Contador";
+import CarroCompras from "../CarroCompras/CarroCompras";
+
+
 
 
 function NavBar () {
@@ -19,7 +23,10 @@ function NavBar () {
                     <Nav.Link href="#Herramientas mano">Herramientas de Mano</Nav.Link>
                     <Nav.Link href="#Herramientas electricas">Herramientas Electricas</Nav.Link>
                   </Nav>
+                  <CarroCompras/>
+                  <Contador stock={10}/>
                 </Container>
+                
               </Navbar>
             </>
         </div>
