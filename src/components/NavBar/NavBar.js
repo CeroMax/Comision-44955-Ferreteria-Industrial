@@ -3,13 +3,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import "./NavBar.css";
-import { Contador } from "../Contador/Contador";
 import CarroCompras from "../CarroCompras/CarroCompras";
 
 
 
 
 function NavBar () {
+
+    
+
     return(
         <div>
             <CardWidget />
@@ -24,7 +26,7 @@ function NavBar () {
                     <Nav.Link href="#Herramientas electricas">Herramientas Electricas</Nav.Link>
                   </Nav>
                   <CarroCompras/>
-                  <Contador stock={10}/>
+                  
                 </Container>
                 
               </Navbar>

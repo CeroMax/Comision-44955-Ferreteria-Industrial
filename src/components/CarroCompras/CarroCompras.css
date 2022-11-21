@@ -3,3 +3,9 @@
     width: 20px;
     height: 20px;
 }
+.carro{
+    display: flex;
+}
+.parrafo{
+    background-color: white;
+}

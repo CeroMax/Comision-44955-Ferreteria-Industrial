@@ -33,7 +33,7 @@ export const Contador = ({stock, agregarProducto}) =>{
             <button onClick={Incrementar}> Agregar</button>
             <div className="divContador"><p className="pContador">{Contador}</p></div>
             <button onClick={Quitar}>Quitar</button>
-            <button onClick={agregarProducto}></button>
+            <button onClick={()=>(agregarProducto(Contador))}>sumar al carrito</button>
         </div> 
     )
 }
