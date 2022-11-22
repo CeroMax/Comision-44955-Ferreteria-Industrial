@@ -1,8 +1,8 @@
 
 import amoladoraElectrica from "../../assets/images/amoladoraElectrica.png";
-import sierraElectrica from "../../assets/images/sierraElectrica.png";
+import sierraElectrica from "../../assets/images/sierraElectrica2.png";
 import destornilladores from"../../assets/images/destornilladores.png";
-import llavesFijasMano from "../../assets/images/llavesFijasMano.png";
+import llavesFijasMano from "../../assets/images/llavesfijasmano.png";
 
 export const productosFerreteria =[
     {id:0, titulo: "Amoladora Electrica", precio: "10000 $", foto: amoladoraElectrica, tipo:"electrica",stock:10},
@@ -11,3 +11,11 @@ export const productosFerreteria =[
     {id:3, titulo: "LlavesFijas", precio: "80000 $", foto: llavesFijasMano, tipo:"mano", stock:20},
     
 ]
+
+const promesa =new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        resolve(productosFerreteria)
+        reject (err =>console.log(err))
+    }, 3000)
+})
+export default promesa;

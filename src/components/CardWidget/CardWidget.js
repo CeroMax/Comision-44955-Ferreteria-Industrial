@@ -1,11 +1,13 @@
-import React from 'react';
-import logo from "../../assets/logonuevo2-min.png";
-import "./CardWidget.css";
 
-export default function CardWidget() {
-  return (
-      <div className='imagen-Fondo'>
-        <img src={logo} alt="fondo"/>
-      </div>
-  )
+import carrito from '../../assets/iconoCarrito2.png';
+
+export const CartWidget =() =>{
+    return(
+        <div className='EstiloCarro'>
+            <img className='Alinear' src={carrito} alt="" />
+            
+            <p> carro</p>
+            
+        </div>
+    )
 }
