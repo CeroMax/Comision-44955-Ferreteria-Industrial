@@ -3,15 +3,15 @@ import React from 'react';
 import './Item.css';
 
 export const Item = ({data})=>{
-    const {foto,titulo,precio} = data
+    //const {foto,titulo,precio} = data
     return(
-        <div>
-            <div className="vistaProductos" key={titulo}>
-                <img src={foto} alt={"foto"}/>
-                <h4>{titulo}</h4>
-                <p> {precio}</p>
-                <button className='botonDescripcion'>Descripcion</button>
+        
+            <div className="vistaProductos" key={data.id} id={data.id}>
+                <img src={data.foto} alt={"foto"}/>
+                <h4>{data.titulo}</h4>
+                <p> {data.precio}</p>
+                <button className='botonDescripcion'>Ver detalle</button>
             </div>
-        </div>
+        
     )
 }

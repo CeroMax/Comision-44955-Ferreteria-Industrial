@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import "./NavBar.css";
-import CarroCompras from "../CarroCompras/CarroCompras";
 import logonuevo2 from "../../assets/logonuevo2-min.png";
 import {CartWidget} from "../CardWidget/CardWidget";
 
