@@ -2,6 +2,7 @@ import React from 'react';
 import { Contador } from '../Contador/Contador';
 import "./ItemsListContainer.css";
 import { useState } from 'react';
+import ItemList from '../ItemList/ItemList';
 
 
 export default function ItemsListContainer(props) {
@@ -16,7 +17,9 @@ export default function ItemsListContainer(props) {
 
   return (
     <div>
+      
       <h1 className='title'>{props.title}</h1>
+      <ItemList/>
       <Contador stock={10} agregarProducto={agregar}/>
     </div>
   )
