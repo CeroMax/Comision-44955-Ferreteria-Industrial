@@ -13,7 +13,7 @@ const ItemDetail = () => {
 
     useEffect (() => {
         promesa.then ( response =>{
-            setData (response.find (prod => prod.id === 1))
+            setData (response.find (prod => prod.id === 0))
             setLoading(false)
         })
 

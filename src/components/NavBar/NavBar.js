@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import "./NavBar.css";
 import logonuevo2 from "../../assets/logonuevo2-min.png";
 import {CartWidget} from "../CardWidget/CardWidget";
+import {Link} from 'react-router-dom';
 
 
 
@@ -23,10 +24,10 @@ function NavBar () {
                 <Container className="navBar">
                   <Navbar.Text className="titulo" href="#home">Ferreteria</Navbar.Text>
                   <Nav>
-                    <Nav.Link href="#Inicio">Inicio</Nav.Link>
-                    <Nav.Link href="#Contacto">Contacto</Nav.Link>
-                    <Nav.Link href="#Herramientas mano">Herramientas de Mano</Nav.Link>
-                    <Nav.Link href="#Herramientas electricas">Herramientas Electricas</Nav.Link>
+                    <Link className='margenes' to ="/inicio">Inicio</Link>
+                    <Link className='margenes' to ="/contacto">Contacto</Link>
+                    <Link className='margenes' to ="/inicio/mano">Herramientas de Mano</Link>
+                    <Link className='margenes' to ="/inicio/electricas">Herramientas Electricas</Link>
                   </Nav>
                   <CartWidget/>
                 </Container>
