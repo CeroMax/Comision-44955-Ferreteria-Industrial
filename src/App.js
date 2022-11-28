@@ -1,37 +1,34 @@
 
 import './App.css';
-import Footer from "./components/footer";
 import NavBar from './components/NavBar/NavBar';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemsListContainer from './components/ItemsListContainer/ItemsListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemsDetailContainer';
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import { PaginaContacto } from './pages/PaginaContacto/PaginaContacto';
-import { HerramientasMano } from './pages/HerramientasMano/HerramientasMano';
+import React from 'react';
+import { ItemsListContainer } from './components/ItemsListContainer/ItemsListContainer';
+import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom';
+import{Nosotros} from './components/pages/nosotros';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import {Contacto} from './components/pages/contacto';
 
 
-function App() {
+
+export function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <main>
-          <NavBar />
+      <div className="App-header">
+          <NavBar/>
+
           <Routes>
-            <Route path='/inicio' element={<ItemsListContainer title="Productos Ferreteria"/>}/>
-            <Route path='/contacto' element={<PaginaContacto/>}/>
-            <Route path='/inicio/:tipoProducto' element={<ItemsListContainer title="Herramientas de Mano"/>}/>
-            <Route path='/inicio/:tipoProducto' element={<ItemsListContainer title="Herramientas Electricas"/>}/>
-            <Route path='/item/:productoid' element={<ItemDetailContainer title="Producto"/>}/>
+            <Route path='/' element={<ItemsListContainer/>}/>
+            <Route path="/herramientas" element={<ItemsListContainer/>}/>
+            <Route path="/herramientas/:tipoHerramientas" element={<ItemsListContainer/>}/>
+            <Route path="/item/:productid" element={<ItemDetailContainer/>} />
+            <Route path="/contacto" element={<Contacto/>} />
+            <Route path="/nosotros" element={<Nosotros/>}/>
+
           </Routes>
-
-
-          {/*<ItemsListContainer title="Productos Ferreteria"/>
-          <ItemDetailContainer/>*/}
-          <Footer />
-        </main>
       </div>
+      
     </BrowserRouter>
   );
 }
 
-export default App;
+//export default App;

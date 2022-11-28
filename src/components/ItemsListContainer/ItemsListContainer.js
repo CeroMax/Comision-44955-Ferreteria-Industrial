@@ -1,26 +1,38 @@
-import React from 'react';
-import { Contador } from '../Contador/Contador';
-import "./ItemsListContainer.css";
-import { useState } from 'react';
-import ItemList from '../ItemList/ItemList';
 
+import {useEffect ,useState } from "react";
+import { productosFerreteria } from "../baseDatos/baseDatos";
+import './ItemsListContainer.css';
+import { ItemList } from '../ItemList/ItemList';
+import { useParams } from "react-router-dom";
 
-export default function ItemsListContainer(props) {
+export const ItemsListContainer = ()=>{
+    
+    const {tipoHerramientas} = useParams();
 
-  const [numeroCarro,setNumeroCarro]=useState()
+    const [productos,setProductos] = useState([]);
 
-  const agregar=(productos)=>{
-    console.log("agregar al carrito",productos);
-    setNumeroCarro(productos);
-  }
-  console.log('numeroCarro',numeroCarro);
+    const promesa = new Promise ((resolve, reject)=>{
+        setTimeout(() => {
+            resolve(productosFerreteria);
+        }, 1000);
+    })
 
-  return (
-    <div>
-      
-      <h1 className='title'>{props.title}</h1>
-      <ItemList/>
-      <Contador stock={10} agregarProducto={agregar}/>
-    </div>
-  )
+    useEffect (()=>{
+        promesa.then(resultado =>{
+            
+            if (tipoHerramientas === undefined){
+                setProductos(resultado)
+            }else{
+                const listaFiltro = resultado.filter(item=>item.categoria === tipoHerramientas);
+                setProductos(listaFiltro)
+            }
+        })
+    })
+
+    return(
+        <div className="item-list-container">
+            <p>Productos ferreteria</p>
+            <ItemList items={productos}/>
+        </div>
+    )
 }

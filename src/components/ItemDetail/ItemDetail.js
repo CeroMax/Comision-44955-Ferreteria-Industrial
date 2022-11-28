@@ -1,35 +1,19 @@
 
-import { useState,useEffect } from "react";
-import promesa from "../BaseDatos/BaseDatos";
-import { Item } from "../Item/Item";
 import './ItemDetail.css';
 
-
-
-const ItemDetail = () => {
-
-    const [data,setData] = useState({})
-    const[loading,setLoading]= useState(true)
-
-    useEffect (() => {
-        promesa.then ( response =>{
-            setData (response.find (prod => prod.id === 0))
-            setLoading(false)
-        })
-
-    },[])
-    console.log(data);
+export const ItemDetail = ({item})=>{
     return(
-        <>
-            {
-                loading ? <h2>Cargando....</h2>:
-                 
-                    <div  style={{display:"flex"}}>
-                        <Item key={data.titulo} data={data} />
-                    </div>
-            }
-        </>
-        
+        <div className='detail-container'>
+            {/*<p style={{width: "100%"}}></p>*/}
+            <div className='img-container'>
+                <img src={item.foto} alt={item.titulo}/>
+            </div>
+            <div className='img-container'>
+                <h4>{item.titulo}</h4>
+                <h5> {item.precio}</h5>
+                <h4>Detalle</h4>
+                <h4>{item.detalle}</h4>
+            </div>
+        </div>
     )
 }
-export default ItemDetail;

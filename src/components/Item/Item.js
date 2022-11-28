@@ -1,17 +1,14 @@
 
-import React from 'react';
 import './Item.css';
 
-export const Item = ({data})=>{
-    //const {foto,titulo,precio} = data
+export const Item = ({item})=>{
     return(
-        
-            <div className="vistaProductos" key={data.id} id={data.id}>
-                <img src={data.foto} alt={"foto"}/>
-                <h4>{data.titulo}</h4>
-                <p> {data.precio}</p>
-                <button className='botonDescripcion'>Ver detalle</button>
-            </div>
-        
+        <div className="vistaProductos">
+            <img src={item.foto} alt={item.titulo}/>
+            <h4>{item.titulo}</h4>
+            <p> {item.precio}</p>
+            <button className='botonDescripcion'>Descripcion</button>
+            
+        </div>
     )
 }
