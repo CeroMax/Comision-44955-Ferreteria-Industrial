@@ -21,10 +21,10 @@ console.log(agregarProducto);
 console.log('pruebaContador',contador);
   return(
       <div className='contador'>
-          <button onClick={Incrementar}> + </button>
+          <button className='button' onClick={Incrementar}> + </button>
           <div className="divContador"><p className="pContador">{contador}</p></div>
-          <button onClick={Quitar}> - </button>
-          <button onClick={()=>(agregarProducto(contador))}>sumar al carrito</button>
+          <button className='button' onClick={Quitar}> - </button>
+          <button onClick={()=>(agregarProducto(contador))}>agregar al carrito</button>
       </div> 
   )
  

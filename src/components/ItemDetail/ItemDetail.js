@@ -1,7 +1,14 @@
 
 import './ItemDetail.css';
+import { Contador } from '../Contador/Contador';
 
 export const ItemDetail = ({item})=>{
+
+    const agregar=(cont)=>{
+        console.log("agregar al carrito",cont);
+        }
+
+
     return(
         <div className='detail-container'>
             {/*<p style={{width: "100%"}}></p>*/}
@@ -13,6 +20,7 @@ export const ItemDetail = ({item})=>{
                 <h5> {item.precio}</h5>
                 <h4>Detalle</h4>
                 <h4>{item.detalle}</h4>
+                <Contador stock={item.stock}agregarProducto={agregar} />
             </div>
         </div>
     )

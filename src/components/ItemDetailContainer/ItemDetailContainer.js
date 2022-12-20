@@ -4,17 +4,9 @@ import {useEffect ,useState } from "react";
 import { productosFerreteria } from "../baseDatos/baseDatos";
 import {ItemDetail} from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
-import { Contador } from '../Contador/Contador';
+
 
 export const ItemDetailContainer = ()=>{
-
-
-    
-
-    const agregar=(cont)=>{
-    console.log("agregar al carrito",cont);
-    
-    }
   
 
     const {productid} = useParams();
@@ -43,7 +35,7 @@ export const ItemDetailContainer = ()=>{
         <div className="item-detail-container">
             <p style={{width:"100%", color: "white"}}>Producto seleccionado</p>
             <ItemDetail item={item}/>
-            <Contador stock={item.stock} agregarProducto={agregar}/>
+            
         </div>
     )
 }
