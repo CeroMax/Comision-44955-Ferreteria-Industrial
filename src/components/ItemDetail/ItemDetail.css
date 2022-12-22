@@ -4,14 +4,14 @@
     /*flex-flow: row wrap;*/
     justify-content: center;
     align-items: center;
-    width: 80%;
+   /*width: 80%;*/
     height: auto;
     padding: 10px;
     background-color: azure;
 }
 .img-container{
     display: flex;
-    width: auto;
+    width: 80%;
     height: auto;
     flex-direction: column;
     justify-content: flex-start;

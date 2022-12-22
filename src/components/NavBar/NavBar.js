@@ -20,7 +20,7 @@ function NavBar (){
             </div>
             <nav className='Menu'>
                 <div style={{display:"flex"}} className='Margenes-Contenedor'>
-                    <NavLink className='Margenes Titulo' to="/herramientas">Inicio</NavLink>
+                    <NavLink className='Margenes Titulo' to="/">Inicio</NavLink>
                     <NavLink className='Margenes Titulo' to="herramientas/herramientas electricas">Herramientas Electricas</NavLink>
                     <NavLink className='Margenes Titulo' to="herramientas/herramientas mano">Herramientas Mano</NavLink>
                     <NavLink className='Margenes Titulo' to="/contacto">Contacto</NavLink>

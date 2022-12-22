@@ -8,27 +8,28 @@ import{Nosotros} from './components/pages/nosotros';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import {Contacto} from './components/pages/contacto';
 import CartContent from './components/CartContent/CartContent';
+import DataProvider from './components/Context/DataContext';
 
 
 
 export function App() {
   return (
-    <BrowserRouter>
-      <div className="App-header">
-          <NavBar/>
+    <DataProvider>
+      <BrowserRouter>
+        <div className="App-header">
+            <NavBar/>
 
-          <Routes>
-            <Route path='/' element={<ItemsListContainer/>}/>
-            <Route path="/herramientas" element={<ItemsListContainer/>}/>
-            <Route path="/herramientas/:tipoHerramientas" element={<ItemsListContainer/>}/>
-            <Route path="/item/:productid" element={<ItemDetailContainer/>} />
-            <Route path="/contacto" element={<Contacto/>} />
-            <Route path="/nosotros" element={<Nosotros/>}/>
-            <Route path='/cart' element={<CartContent/>}/>
-          </Routes>
-      </div>
-      
-    </BrowserRouter>
+            <Routes>
+              <Route path='/' element={<ItemsListContainer/>}/>
+              <Route path="/herramientas/:tipoHerramientas" element={<ItemsListContainer/>}/>
+              <Route path="/item/:productid" element={<ItemDetailContainer/>} />
+              <Route path="/contacto" element={<Contacto/>} />
+              <Route path="/nosotros" element={<Nosotros/>}/>
+              <Route path='/cart' element={<CartContent/>}/>
+            </Routes>
+        </div>
+      </BrowserRouter>
+    </DataProvider>
   );
 }
 
