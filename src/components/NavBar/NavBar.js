@@ -28,9 +28,11 @@ function NavBar (){
                     {/*<NavLink className={({isActive})=>isActive ? "claseActive": "claseInactive"} to="/Eventos">Eventos</NavLink>*/}
                 
                 </div>
-                <div className='EstiloCarro'>
-                    <CartWidget />
-                </div>
+                <NavLink to={"/cart"}>
+                    <div className='EstiloCarro'>
+                        <CartWidget />
+                    </div>
+                </NavLink>
             </nav>
         </>
     );
