@@ -9,6 +9,9 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import {Contacto} from './components/pages/contacto';
 import CartContent from './components/CartContent/CartContent';
 import DataProvider from './components/Context/DataContext';
+import { PaginaFirebase } from './components/PaginaFirebase/PaginaFirebase';
+
+
 
 
 
@@ -26,6 +29,7 @@ export function App() {
               <Route path="/contacto" element={<Contacto/>} />
               <Route path="/nosotros" element={<Nosotros/>}/>
               <Route path='/cart' element={<CartContent/>}/>
+              <Route path="/firebase" element={<PaginaFirebase/>}/>
             </Routes>
         </div>
       </BrowserRouter>

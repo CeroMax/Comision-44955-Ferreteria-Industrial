@@ -1,9 +1,8 @@
 import React from 'react'
+import CartElement from './CartElement'
 
 const CartContent = () => {
-  return (
-    <div>CartContent</div>
-  )
+  return <CartElement/>
 }
 
 export default CartContent

@@ -8,6 +8,7 @@ const DataProvider = ({children}) => {
 
     const [data, setData] =useState([]);
     const [cart, setCart] =useState([]);
+    const [cont1,setCont1] = useState([]);
 
     const promesa = new Promise ((resolve, reject)=>{
         setTimeout(() => {
@@ -20,7 +21,7 @@ const DataProvider = ({children}) => {
     },)
 
     return (
-        <dataContext.Provider value={{data}}>
+        <dataContext.Provider value={{data, cart, setCart,cont1,setCont1}}>
             {children}
         </dataContext.Provider>
     )
